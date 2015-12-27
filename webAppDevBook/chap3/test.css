@@ -1,0 +1,23 @@
+main {
+    width: 500px;
+    margin: auto;
+    background: gray;
+    overflow: auto;
+}
+
+nav {
+    width: 100px;
+    float: right;
+}
+
+nav p {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 10px;
+    float: left;
+    width: 300px;
+}
