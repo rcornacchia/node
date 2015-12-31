@@ -1,0 +1,18 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'lint' ]
+2 info using npm@1.4.23
+3 info using node@v0.10.5
+4 verbose config Skipping project config: /Users/Rob/.npmrc. (matches userconfig)
+5 error Error: ENOENT, open '/Users/Rob/code/node/webAppDevBook/chap3/package.json'
+6 error If you need help, you may report this *entire* log,
+6 error including the npm and node versions, at:
+6 error     <http://github.com/npm/npm/issues>
+7 error System Darwin 14.5.0
+8 error command "node" "/usr/local/bin/npm" "run" "lint"
+9 error cwd /Users/Rob/code/node/webAppDevBook/chap3
+10 error node -v v0.10.5
+11 error npm -v 1.4.23
+12 error path /Users/Rob/code/node/webAppDevBook/chap3/package.json
+13 error code ENOENT
+14 error errno 34
+15 verbose exit [ 34, true ]
