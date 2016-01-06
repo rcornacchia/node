@@ -22,6 +22,10 @@ main {
   width: 285px;
 }
 
+.comment_input span:hover {
+    cursor: pointer;
+}
+
 .comment-input p {
   margin-bottom: 10px;
 }
