@@ -86,12 +86,44 @@ apiRouter.route('/users')
     }).get(function(req, res) {
         User.find(function(err, users) {
             if(err) res.send(err);
-            
+
             // return the users
             res.json(users);
         });
     });
 
+
+    apiRouter.route('/users/:user_id')
+        // get the user with that id
+        // accessed at GET http://localhost:8080/api/users/:user_id
+        .get(function(req, res) {
+            User.findById(req.params.user_id, function(err, user) {
+                if (err) res.send(err);
+
+                // return that user
+                res.json(user);
+            });
+        })
+        .put(function(req, res) {
+
+            // use our user model to find the user we want
+            User.findById(req.params.user_id, function(err, user) {
+                if(err) res.send(err);
+
+                // update the users info only if ts new
+                if (req.body.name) user.name = req.body.name;
+                if (req.body.username) user.username = req.body.username;
+                if (req.body.password) user.password = req.body.password;
+
+                // save the user
+                user.save(function(err) {
+                    if(err) res.send(err);
+
+                    // return a message
+                    res.json({ message: 'User updated!' });
+                });
+            });
+        });
 
 // more routes go here
 
