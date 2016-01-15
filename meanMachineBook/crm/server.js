@@ -123,6 +123,13 @@ apiRouter.route('/users')
                     res.json({ message: 'User updated!' });
                 });
             });
+        }).delete(function(req, res) {
+            User.remove({
+                _id: req.params.user_id
+            }, function(err, user) {
+                if(err) return res.send(err);
+                res.json({ message: 'Successfully deleted' });
+            });
         });
 
 // more routes go here
