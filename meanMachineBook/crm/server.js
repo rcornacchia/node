@@ -10,6 +10,8 @@ var superSecret = "ilovescotchscotchyscotchscotch";
 var mongoose    = require('mongoose');      // communicates w database
 mongoose.connect('mongodb://localhost/test');
 
+
+// test
 // App Configuration
 // use body parser so we can grab information from POST requests
 app.use(bodyParser.urlencoded({ extended: true }));
