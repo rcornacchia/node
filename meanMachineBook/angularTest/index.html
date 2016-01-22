@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    
 <head>
     <meta charset="utf-8">
     <title>My first Angular app</title>
@@ -18,6 +19,11 @@
 
 <body class="container" ng-app="firstApp" ng-controller="mainController as main">
     <div class="jumbotron">
+        <div class="form-group">
+            <label>Message</label>
+            <input type="text" class="form-control" ng-model="main.message">
+        </div>
+
         <h2>This is my message: </h2>
         {{ main.message }}
 
