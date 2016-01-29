@@ -2,12 +2,12 @@
 angular.module('routerRoutes', ['ngRoute'])
 
 // configure routes
-.config(function($routeProvide, $locationProvider) {
+.config(function($routeProvider, $locationProvider) {
     $routeProvider
         // route for the home page
         .when('/', {
             templateUrl : 'views/pages/home.html',
-            congroller  : 'homeController',
+            controller  : 'homeController',
             controllerAs: 'home'
         })
 
@@ -26,5 +26,5 @@ angular.module('routerRoutes', ['ngRoute'])
         });
 
     // set our app to have pretty URLS
-    $locationProvider.html5mode(true);
+    $locationProvider.html5Mode(true);
 });
