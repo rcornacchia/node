@@ -1,9 +1,10 @@
 // inject ngRoute for all our routing needs
 angular.module('routerRoutes', ['ngRoute'])
 
-// configure routes
+// configure our routes
 .config(function($routeProvider, $locationProvider) {
     $routeProvider
+
         // route for the home page
         .when('/', {
             templateUrl : 'views/pages/home.html',
@@ -25,6 +26,5 @@ angular.module('routerRoutes', ['ngRoute'])
             controllerAs: 'contact'
         });
 
-    // set our app to have pretty URLS
     $locationProvider.html5Mode(true);
 });
