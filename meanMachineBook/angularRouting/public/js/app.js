@@ -24,6 +24,8 @@ angular.module('routerApp', ['routerRoutes'])
 
 	var vm = this;
 
+    //
+
     	vm.message = 'Look! I am an about page.';
 })
 
